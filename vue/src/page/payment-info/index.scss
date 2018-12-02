@@ -1,0 +1,119 @@
+@import "~baseCss";
+
+.payment-info-page {
+  .payment-content {
+	padding: 0 10px;
+	height: calc(100% - 60px);
+
+	.owner-information {
+	  min-height: 60px;
+	  //line-height: 60px;
+	  font-size: 18px;
+	  border-bottom: 2px solid #cccccc;
+	  p {
+		text-align: left;
+		margin-bottom: 10px;
+	  }
+	  .room-title {
+		padding-left: 10px;
+	  }
+	  .room-content {
+		padding-left: 20px;
+	  }
+	}
+	.payment-list-content {
+	  margin-top: 10px;
+	  text-align: left;
+	  height: calc(100% - 78px);
+	  box-sizing: border-box;
+	  padding: 0 15px;
+
+	  .payment-list-title {
+		border-bottom: 1px solid #cccccc;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		h1 {
+		  margin: 0;
+		  padding: 0;
+		  font-weight: normal;
+		  font-size: 18px;
+		  display: inline-block;
+		  width: 80%;
+
+		}
+		.checkbox-all {
+		  display: inline-block;
+		  width: 18%;
+		}
+	  }
+	  .checkbox-group {
+		width: 100%;
+		height: calc(100% - 50px);
+		ul {
+		  //padding: 0 15px;
+		  height: calc(100% - 20px);
+		  overflow-y: scroll;
+		  overflow-x: hidden;
+		  li {
+			margin-top: 10px;
+			border-bottom: 1px solid #cccccc;
+			padding-bottom: 10px;
+			.checkbox-content {
+			  width: 100%;
+			}
+			div.info-content {
+			  width: 80%;
+			  min-height: 30px;
+			  line-height: 1em; //line-height: 30px;
+			  display: inline-block;
+			  float: left;
+
+			  div {
+				//height: 20px;
+				line-height: 25px;
+			  }
+			  span {
+				vertical-align: middle;
+				display: inline-block;
+			  }
+			  span.info-title {
+				min-width: 60px;
+				max-width: 70%;
+				margin-right: 10px;
+				word-break: break-all;
+				//@include text-justify;
+				display: inline-block;
+			  }
+			}
+			//.checkbox-content {
+			//  vertical-align: middle;
+			//  display: inline-block;
+			//  width: 18%;
+			//}
+		  }
+		}
+	  }
+	  .statistics-content {
+		line-height: 30px;
+		padding: 10px 0;
+		label {
+		  font-size: 16px;
+		  word-break: break-all;
+		  vertical-align: middle;
+		}
+		span {
+		  display: inline-block;
+		  max-width: 70%;
+		  min-width: 10%;
+		  word-break: break-all;
+		  vertical-align: middle;
+		}
+		.oper-btn {
+		  float: right;
+		}
+	  }
+	}
+
+  }
+}

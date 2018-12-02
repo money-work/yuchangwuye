@@ -1,0 +1,144 @@
+body, p, ul, dl, dd, ol, h1, h2, h3, h4, h5, h6 {
+	margin: 0
+}
+
+ul, ol {
+	padding-left: 0;
+	list-style: none
+}
+
+em, i {
+	font-style: normal
+}
+
+strong, b {
+	font-style: normal
+}
+
+a {
+	text-decoration: none
+}
+
+#app {
+	position: relative;
+	font-family: 'PingFangSC-Regular', 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	/*background-color: #f2f5f8;*/
+	background-color: #ffffff;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.login-content {
+	height: 100%;
+	width: 100%;
+}
+
+.top-logo img {
+	width: 100%;
+}
+
+.login-content .bottom-content {
+	width: 100%;
+}
+
+.login-content .owner-information {
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.login-content .input-content {
+	height: 40px;
+	line-height: 40px;
+	font-size: 0;
+	text-align: left;
+	overflow: hidden;
+}
+
+.login-content .input-content:first-child {
+	border-top: 1px solid #cccccc;
+}
+
+.login-content .input-content:last-child {
+	border-bottom: 1px solid #cccccc;
+}
+
+.login-content .input-content input {
+	float: right;
+	width: calc(100% - 40px);
+	border: 0;
+	border-bottom: 1px solid #cccccc;
+	height: 39px;
+	outline: 0;
+	font-size: 14px;
+}
+
+.login-content .input-content:last-child input {
+	border: 0;
+}
+
+.login-content .input-content input:focus {
+	outline: 0;
+}
+
+.login-content .input-content i {
+	display: inline-block;
+	width: 40px;
+	height: 100%;
+	background-size: 22px;
+	background-repeat: no-repeat;
+	background-image: url("./images/logo.png");
+}
+
+.login-content .input-content i.phone {
+	background-position: 9px 9px;
+}
+
+.login-content .input-content i.name {
+	background-position: 9px -36px;
+}
+
+.login-content .input-content i.idCardNo {
+	background-position: 9px -77px;
+}
+
+.login-content .oper-content {
+	margin: 20px 10px;
+
+}
+
+.login-content .oper-content .ant-btn-primary {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fb5024;
+	border-color: #fb5024;
+}
+
+.login-content .ant-btn-primary i {
+	display: none;
+}
+
+.login-content .ant-btn-loading i {
+	display: inline-block;
+}
+
+.login-content .ant-btn-primary span {
+	margin-left: 0 !important;
+}
+
+.login-content .ant-btn-loading span {
+	margin-left: 8px !important;
+}
+
+.login-content .tips-content {
+	margin: 20px 10px;
+
+}

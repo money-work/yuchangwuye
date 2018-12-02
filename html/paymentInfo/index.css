@@ -1,0 +1,124 @@
+.payment-info-page .payment-content {
+	padding: 0 10px;
+	height: calc(100% - 60px);
+}
+
+.payment-info-page .payment-content .owner-information {
+	min-height: 60px;
+	font-size: 18px;
+	border-bottom: 2px solid #cccccc;
+}
+
+.payment-info-page .payment-content .owner-information p {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.payment-info-page .payment-content .owner-information .room-title {
+	padding-left: 10px;
+}
+
+.payment-info-page .payment-content .owner-information .room-content {
+	padding-left: 20px;
+}
+
+.payment-info-page .payment-content .payment-list-content {
+	margin-top: 10px;
+	text-align: left;
+	height: calc(100% - 78px);
+	box-sizing: border-box;
+	padding: 0 15px;
+}
+
+.payment-info-page .payment-content .payment-list-content .payment-list-title {
+	border-bottom: 1px solid #cccccc;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.payment-info-page .payment-content .payment-list-content .payment-list-title h1 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 18px;
+	display: inline-block;
+	width: 80%;
+}
+
+.payment-info-page .payment-content .payment-list-content .payment-list-title .checkbox-all {
+	display: inline-block;
+	width: 18%;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group {
+	width: 100%;
+	height: calc(100% - 50px);
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul {
+	height: calc(100% - 20px);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li {
+	margin-top: 10px;
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li .checkbox-content {
+	width: 100%;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li div.info-content {
+	width: 80%;
+	min-height: 30px;
+	line-height: 1em;
+	display: inline-block;
+	float: left;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li div.info-content div {
+	line-height: 25px;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li div.info-content span {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.payment-info-page .payment-content .payment-list-content .checkbox-group ul li div.info-content span.info-title {
+	min-width: 60px;
+	max-width: 70%;
+	margin-right: 10px;
+	word-break: break-all;
+	display: inline-block;
+}
+
+.payment-info-page .payment-content .payment-list-content .statistics-content {
+	line-height: 30px;
+	padding: 10px 0;
+}
+
+.payment-info-page .payment-content .payment-list-content .statistics-content label {
+	font-size: 16px;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+.payment-info-page .payment-content .payment-list-content .statistics-content span.all-money {
+	display: inline-block;
+	max-width: 70%;
+	min-width: 10%;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+.payment-info-page .payment-content .payment-list-content .statistics-content .oper-btn {
+	float: right;
+}
+
+/*# sourceMappingURL=index.css.map */

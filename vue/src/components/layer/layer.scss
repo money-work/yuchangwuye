@@ -1,0 +1,105 @@
+@import '~baseCss';
+
+.layer {
+  /*position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 999;
+
+}
+.layer-wrapper {
+  z-index:1000;
+  min-width: 280px;
+  width: 280px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  .layer-title {
+    margin-top:36px;
+    @extend %fs-16;
+    color:$C-3;
+    margin-bottom:8px;
+  }
+  .layer-content {
+    color:$C-9;
+    margin-bottom:30px;
+    padding: 0 20px;
+  }
+  .layer-bottom-btn {
+    @extend %fs-16;
+    border-top:1px solid #EAEAEA;
+    height:44px;
+    line-height:44px;
+    text-align: center;
+    .ok,.cancel{
+      width:100%;
+      @extend %box-s;
+      @extend %d-il;
+    }
+    .confirm-btn{
+      @extend %clear;
+      .ok,.cancel{
+        width:50%;
+        float:left;
+      }
+    }
+    .ok{
+      color:$brand-primary;
+    }
+    .cancel{
+      border-right:1px solid #EAEAEA;
+      color:$C-9;
+    }
+  }
+}
+.layer-outer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+}
+
+@if $from == 'wechat' {
+  .layer-wrapper {
+    .layer-title {
+      font-size: 17px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      line-height: 1;
+    }
+
+    .layer-content {
+      color: #666666;
+      font-size: 14px;
+    }
+
+    .layer-bottom-btn {
+      .ok {
+        color: $C-3;
+      }
+      .cancel{
+        color: $C-6;
+      }
+    }
+  }
+}
+
+
+

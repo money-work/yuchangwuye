@@ -1,0 +1,22 @@
+.payment-list-page {
+  .payment-list-content {
+	padding: 0 10px;
+
+	.owner-information {
+	  height: 60px;
+	  line-height: 60px;
+	  font-size: 18px;
+	  border-bottom: 2px solid #cccccc;
+	}
+	.payment-list-collapse {
+	  margin-top: 20px;
+	  text-align: left;
+	  p {
+		padding: 0 40px;
+		height: 30px;
+		line-height: 30px;
+		margin: 0;
+	  }
+	}
+  }
+}

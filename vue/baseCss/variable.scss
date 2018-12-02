@@ -1,0 +1,946 @@
+//公用变量，基础样式打包，组件打包均使用此文件。后期需迁移其他项目时则或者多份此文件，由打包工具控制使用哪个基础样式变量文件。
+
+//<editor-fold desc="色值">
+/* static color */
+$from: 'oa';
+$wsFrom: false;
+
+$C-FFF: #fff;
+$C-F0: #f0f0f0;
+$C-0: #000;
+$C-F2: #f2f2f2;
+$C-3: #333;
+$C-6: #666;
+$C-8: #888;
+$C-9: #999;
+$C-A: #aaa;
+$C-16F: #16abff;
+$C-B2: #b2b2b2;
+$C-210: #29CC6D; /* green */
+$C-F41: #F61A49; /* red */
+$C-FF0: #ff9000; /* orange */
+$C-2D0: #1B97FF; /* blue */
+$C-GRAY: #f8f8f8;
+$C-bGray: #f2f2f2;
+$C-F3D0: #FF3D00;
+$C-98: #989898;
+
+$gray-dark: #373a3c !default;
+$gray: #55595c !default;
+$gray-light: #cccccc !default;
+$gray-lighter: #f5f5f5 !default;
+$gray-lightest: #f7f7f9 !default;
+
+//背景色
+$body-bg: #F8FAFB;
+$body-color: $C-3;
+
+// font color
+$title-font: $C-3 !default;
+$base-font: $body-color !default;
+$link-font: $base-font !default;
+$gray-font: $C-GRAY !default;
+
+// 主色
+$brand-primary: #d12f38;
+
+// font color
+$title-font: #333 !default;
+$base-font: #666 !default;
+$link-font: $base-font !default;
+$gray-font: $C-GRAY !default;
+
+$border-color: $gray-light; //e3e3e3
+
+$link-active-color: $brand-primary;
+
+//</editor-fold>
+
+//<editor-fold desc="按钮">
+$btn-primary-color: #fff !default;
+$btn-primary-bg: #d12f38 !default;
+$btn-primary-border: $btn-primary-bg !default;
+
+$btn-second-color: $C-9 !default;
+$btn-second-bg: $C-FFF !default;
+$btn-second-border: $C-9 !default;
+
+//</editor-fold>
+
+//<editor-fold desc="弹框">
+$alert-bg-color: #fff;
+$alert-link-primary-color: #31AEE7;
+$alert-link-secondary-color: $C-9;
+//</editor-fold>
+
+//<editor-fold desc="字体样式">
+$h1-size: 2rem !default;
+$h2-size: 1.68rem !default;
+$h3-size: 1.5rem !default;
+$base-size: 1.3rem !default; //默认
+$small-size: 1.22rem !default;
+$milli-size: 1.1rem !default;
+$micro-size: 1rem !default;
+
+//</editor-fold>
+
+//<editor-fold desc="边框样式">
+$btn-disabled-bg-color: $gray-light;
+$btn-disabled-color: $gray-lighter;
+
+//</editor-fold>
+
+//<editor-fold desc="基础继承样式">
+%l-1 {
+  line-height: 1;
+}
+
+%l-12 {
+  line-height: 1.2;
+}
+
+%l-14 {
+  line-height: 1.4;
+}
+
+%l-16 {
+  line-height: 1.6;
+}
+
+%fs-10 {
+  font-size: 10px;
+}
+
+%fs-12 {
+  font-size: 12px;
+}
+
+%fs-14 {
+  font-size: 14px;
+}
+
+%fs-16 {
+  font-size: 16px;
+}
+
+%fs-18 {
+  font-size: 18px;
+}
+
+%fs-24 {
+  font-size: 24px;
+}
+
+/* 透明 */
+%invisible {
+  color: transparent !important;
+  //-webkit-user-select:none; // 禁选
+  text-shadow: none !important;
+}
+
+%box-s {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$h1-size: 2rem !default;
+$h2-size: 1.68rem !default;
+$h3-size: 1.5rem !default;
+$base-size: 1.3rem !default; //默认
+$small-size: 1.22rem !default;
+$milli-size: 1.1rem !default;
+$micro-size: 1rem !default;
+
+%XXL {
+  font-size: $h1-size;
+}
+
+%XL {
+  font-size: $h2-size;
+}
+
+%L {
+  font-size: $h3-size;
+}
+
+%M {
+  font-size: $base-size;
+}
+
+//默认
+%S {
+  font-size: $small-size;
+}
+
+%XS {
+  font-size: $milli-size;
+}
+
+%XXS {
+  font-size: $micro-size;
+}
+
+%t-c {
+  text-align: center;
+}
+
+%t-l {
+  text-align: left;
+}
+
+%t-r {
+  text-align: right;
+}
+
+%t-fl {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@import "./utils";
+
+%border-1px {
+  position: relative;
+  border: none;
+
+  &:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	display: block;
+	overflow: hidden;
+	background-color: lighten($C-GRAY, 25%);
+	-webkit-transform: scaleY(.5);
+	-webkit-transform-origin: 0 100%;
+	transform: scaleY(.5);
+	transform-origin: 0 100%;
+  }
+}
+
+%flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flex-1 {
+  @include flex(1);
+}
+
+%flex-2 {
+  @include flex(2);
+}
+
+%flex-3 {
+  @include flex(3);
+}
+
+/* margin */
+%m-0 {
+  @include margin(0);
+}
+
+%m-t-10 {
+  margin-top: 10px;
+}
+
+%m-t-20 {
+  margin-top: 20px;
+}
+
+%m-l-10 {
+  margin-left: 10px;
+}
+
+%m-r-10 {
+  margin-right: 10px;
+}
+
+%m-tb-10 {
+  @include margin(10px 0);
+}
+
+%m-lr-10 {
+  @include margin(0 10px);
+}
+
+%m-10 {
+  @include margin(10px);
+}
+
+%m-tb-14 {
+  @include margin(14px 0);
+}
+
+/* padding */
+
+%p-0 {
+  @include padding(0);
+}
+
+%p-t-10 {
+  @include padding(10px 0 0 0);
+}
+
+%p-tb-10 {
+  @include padding(10px 0);
+}
+
+%p-lr-10 {
+  @include padding(0 10px);
+}
+
+%p-tb-20 {
+  @include padding(20px 0);
+}
+
+%p-10 {
+  @include padding(10px);
+}
+
+/* zindex */
+
+%z-l {
+  z-index: 1;
+}
+
+%z-h {
+  z-index: 20;
+}
+
+%z-bh {
+  z-index: 21;
+}
+
+/* over-flow hide */
+
+%ov-fl-h {
+  overflow: hidden;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis; /* for internet explorer */
+  overflow: hidden;
+}
+
+/* align || position */
+
+%p-re {
+  position: relative;
+}
+
+%p-ab {
+  position: absolute;
+}
+
+%p-fx {
+  position: fixed;
+}
+
+%p-tl, %p-tr, %p-b, %p-c, %p-br, %p-vc {
+  @extend %p-ab;
+}
+
+%p-tl {
+  left: 0;
+  top: 0;
+}
+
+%p-tr {
+  right: 0;
+  top: 0;
+}
+
+%p-tr-c {
+  @extend %p-tr;
+  bottom: 0;
+  margin: auto 0;
+}
+
+%p-b {
+  bottom: 0;
+}
+
+%p-br {
+  bottom: 0;
+  right: 0;
+}
+
+%p-c {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* know el size in center*/
+
+%p-vc {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+%d-il {
+  display: inline-block;
+}
+
+%d-flex {
+  display: flex;
+}
+
+%d-bc {
+  display: block;
+}
+
+%f-l {
+  float: left;
+}
+
+%f-r {
+  float: right;
+}
+
+%clear {
+  &:after {
+	content: '';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	line-height: 0;
+  }
+  zoom: 1;
+}
+
+$gap: 10px;
+
+@mixin spriteImg($w:"12px",$h:"12px",$in-w:"22px",$in-h:"25px",$pos-x:0,$pos-y:0,$scale:0.5) {
+  width: $w;
+  height: $h;
+  position: relative;
+  @extend %d-il;
+  vertical-align: middle;
+  &:after {
+	content: " ";
+	@extend %d-il;
+	width: $in-w;
+	height: $in-h;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url('../../images/pic.png');
+	background-repeat: no-repeat;
+	background-position: $pos-x $pos-y;
+	background-size: inherit;
+	transform: scale($scale);
+	transform-origin: left top;
+	-webkit-transform: scale($scale);
+	-webkit-transform-origin: left top;
+
+  }
+}
+
+%c-f {
+  color: $C-FFF;
+}
+
+%c-f2 {
+  color: $C-F2;
+}
+
+%c-0 {
+  color: $C-0;
+}
+
+%c-3 {
+  color: $C-3;
+}
+
+%c-6 {
+  color: $C-6;
+}
+
+%c-8 {
+  color: $C-8;
+}
+
+%c-9 {
+  color: $C-9;
+}
+
+%c-a {
+  color: $C-A;
+}
+
+%c-16f {
+  color: $C-16F;
+}
+
+%c-b2 {
+  color: $C-B2;
+}
+
+%c-210 {
+  color: $C-210;
+}
+
+/* green */
+
+%c-f41 {
+  color: $C-F41;
+}
+
+/* red */
+
+%c-ff0 {
+  color: $C-FF0;
+}
+
+/* orange */
+
+%c-2d0 {
+  color: $C-2D0;
+}
+
+/* blue */
+
+/* backgournd */
+
+%bgc-f {
+  background-color: #fff;
+}
+
+%bgc-f250 {
+  background-color: rgb(250, 250, 250);
+}
+
+%bgc-f2 {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+%bgc-fa {
+  background-color: #fafafa;
+}
+
+%bgc-f6 {
+  background-color: #f6f6f6;
+}
+
+%bgc-0 {
+  background-color: #000;
+}
+
+%bgc-05 {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+%bgc-c210 {
+  background-color: $C-210;
+}
+
+%bgc-gray {
+  background-color: $C-GRAY;
+}
+
+%bgc-main {
+  background-color: $brand-primary;
+}
+
+/* border */
+%bort-s-1:before {
+  @include borderScaleLine(top, #DEDEDE, .51);
+  top: 0;
+}
+
+%borb-s-1:after {
+  @include borderScaleLine(bottom, #DEDEDE, .51);
+  bottom: 0;
+}
+
+%bdr-1-c { /* border: 1px solid #ccc; */
+}
+
+%bdr-1-c:before {
+  @include borderScaleLineFull(#EAEAEA, .6);
+  @include radius(4px);
+}
+
+%bdr-t-f {
+  border-top: 1px solid $C-FFF;
+}
+
+%bdr-b-e6 {
+  border-bottom: 1px solid #f6f6f6;
+}
+
+%db-bdr {
+  @extend %bort-s-1;
+}
+
+/* size */
+
+%h-fl {
+  height: 100%;
+}
+
+%h-iht {
+  height: inherit;
+}
+
+%w-fl {
+  width: 100%;
+}
+
+%wh-fl {
+  width: 100%;
+  height: 100%;
+}
+
+%hf-w {
+  width: 50%;
+}
+
+%w-33 {
+  width: 33.33334%;
+}
+
+%w-3 {
+  width: 300%;
+}
+
+%hide {
+  display: none;
+}
+
+/* radius */
+%radius {
+  @include radius(4px);
+}
+
+/* img */
+%w-auto {
+  width: auto;
+  height: 100%;
+}
+
+%h-auto {
+  height: auto;
+  width: 100%;
+}
+
+// scroll bar 原生滚动条开启
+%df-scroller {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+//背景图默认
+%bg-default {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+%index-list-img-default-bg, %detail-img-default-bg {
+  @extend %bg-default;
+  background-image: url(../../images/hybrid/goupiao_list_bg_normal@2x.png);
+}
+
+%detail-img-default-bg {
+  background-size: cover;
+}
+
+%net-error {
+  @extend %bg-default;
+  margin-top: 40px;
+  width: 80px;
+  height: 94px;
+  display: inline-block;
+  background-image: url(../../images/hybrid/net_erro.png);
+}
+
+%ab-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $C-FFF;
+  z-index: 10;
+}
+
+@mixin loadingStep($step) {
+
+  $def: 0px;
+  $val: 0-$step * 20;
+  //background-position-y:-($step-1*20)px;
+
+  background-position: 0 $val+$def;
+}
+
+@mixin loadingAnimate() {
+  $step: 30;
+  $dw: 1%;
+  @for $i from 0 to $step {
+	$bfb: $dw*(100/$step)*$i;
+	#{$bfb} {
+	  @include loadingStep($i);
+	  transform: translate3d(0, 0, 0);
+	}
+
+  }
+}
+
+@-webkit-keyframes loading-animate {
+  @include loadingAnimate();
+}
+
+%loading-animate {
+  -webkit-animation-name: loading-animate;
+  -webkit-animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite; /*无限循环*/
+  -webkit-animation-timing-function: step-start;
+}
+
+%loading-bg {
+  background-size: 20px 600px;
+  @extend %d-il;
+  width: 20px;
+  height: 20px;
+  //border: 1px solid $brand-primary;
+  background-image: url(../../images/hybrid/loading.png);
+}
+
+%pull-loading-animate {
+  @extend %loading-bg;
+  @extend %loading-animate;
+}
+
+%loading-img {
+  @extend %loading-bg;
+  background-position-x: 0;
+  &.step-1 {
+	@include loadingStep(1);
+  }
+  &.step-2 {
+	@include loadingStep(2);
+  }
+  &.step-3 {
+	@include loadingStep(3);
+  }
+  &.step-4 {
+	@include loadingStep(4);
+  }
+  &.step-5 {
+	@include loadingStep(5);
+  }
+  &.step-6 {
+	@include loadingStep(6);
+  }
+  &.step-7 {
+	@include loadingStep(7);
+  }
+  &.step-8 {
+	@include loadingStep(8);
+  }
+  &.step-9 {
+	@include loadingStep(9);
+  }
+  &.step-10 {
+	@include loadingStep(10);
+  }
+  &.step-11 {
+	@include loadingStep(11);
+  }
+  &.step-12 {
+	@include loadingStep(12);
+  }
+  &.step-13 {
+	@include loadingStep(13);
+  }
+  &.step-14 {
+	@include loadingStep(14);
+  }
+  &.step-15 {
+	@include loadingStep(15);
+  }
+}
+
+// iscroll
+%scroller {
+  @extend %p-ab;
+  @extend %w-fl;
+}
+
+%flex-columns {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+%page {
+  @extend %p-c;
+  overflow-x: hidden;
+}
+
+// UI
+%fix-b {
+  @extend %p-fx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @extend %t-c;
+  @extend %bgc-f;
+}
+
+//</editor-fold>
+
+//<editor-fold desc="预留页面公用样式">
+//用于基础样式中没有的颜色或字体等，变量明明以页面名称为前缀，如首页：
+//$index-footer-btn-color:#fff;
+
+$detail-header-tag-color: #648099;
+%detail-header-background {
+  background-color: #fff;
+  //background-color: #C2C3C5;
+  //background: -webkit-radial-gradient(50% 100%, 80% 150%, #ffefe5, #b9f3ff);
+}
+
+%index-search-middle-warning-scIcon {
+  margin-top: 100px;
+}
+
+%index-search-box {
+  font-size: 14px;
+}
+
+$index-search-input-bg: #F8FAFB;
+%index-category-ico-default {
+  &.cate_more {
+	background-image: url(../../images/category/goupiao_ic_more_normal@2x.png);
+  }
+  &.cate_8a8283eb55dfd9600156029f06af0010 {
+	background-image: url(../../images/category/goupiao_ic_zuqiu_normal@2x.png);
+  }
+  &.cate_8a8283eb560e5e97015625fd044b0003 {
+	background-image: url(../../images/category/goupiao_ic_wangqiu_normal@2x.png);
+  }
+  &.cate_8a8283eb55dfd9600156029fa4120012 {
+	background-image: url(../../images/category/goupiao_ic_jingji_normal@2x.png);
+  }
+  &.cate_8a8283eb55dfd9600156029f3ce00011 {
+	background-image: url(../../images/category/goupiao_ic_lanqiu_normal@2x.png);
+  }
+  &.cate_8a8283eb55dfd9600156029ff9b10013 {
+	background-image: url(../../images/category/goupiao_ic_zonghe_normal@2x.png);
+  }
+
+  &.cate_8a8283eb57bd5d630157d56ba37a000f {
+	background-image: url(../../images/category/goupiao_ic_bingxue_normal@2x.png);
+  }
+  &.cate_8a8283eb581a322c015823e5d3070008 {
+	background-image: url(../../images/category/goupiao_ic_qipai_normal@2x.png);
+  }
+  &.cate_8a8283eb57225f6f0157b29a191d0075 {
+	background-image: url(../../images/category/goupiao_ic_mashu_normal@2x.png);
+  }
+}
+
+$loading-color: #d12f38;
+$ADHeight: 166px;
+%not-found-img {
+  width: 200px;
+  height: 200px;
+  color: #909090;
+  margin-top: 100px;
+  background: url(../../baseCss/mobile/img/404.png) no-repeat center center;
+  background-size: contain;
+}
+
+%index-city-search-no-data {
+  &.index-use {
+	background-color: #f2f2f2;
+  }
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  .Search__Nothing {
+	margin-top: 60px;
+	text-align: center;
+  }
+  .middle-warning {
+	padding-top: 0 !important;
+	p.L {
+	  color: #949494;
+	  font-size: 1.5rem;
+	}
+	button {
+	  font-weight: 200;
+	  font: 1.68rem Arial;
+	}
+	i.sc_icon {
+	  margin-top: 0;
+	  display: inline-block;
+	  width: 200px;
+	  height: 200px;
+	  background: url('~source/images/nothing.jpg') center center;
+	  background-size: contain;
+	  &::after {
+		display: none;
+	  }
+	}
+  }
+
+}
+
+%project-show-list {
+  @extend %flex-columns;
+  @extend %flex;
+  min-height: 360px;
+  &.index-use {
+	padding-bottom: 50px;
+  }
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  .recommend-list .title i {
+	margin: 0 5px 0 0 !important;
+  }
+}
+
+.btn-hollow {
+  color: $brand-primary;
+  border: 1px solid $brand-primary;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.std-bdr-btn {
+  background-color: $btn-primary-bg;
+  &[disabled] {
+	background-color: #ccc;
+	color: #fff;
+  }
+}
+
+@mixin text-justify {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  text-align-last: justify;
+}
+
+//</editor-fold>

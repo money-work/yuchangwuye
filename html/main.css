@@ -1,0 +1,148 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+#app {
+	position: relative;
+	font-family: 'PingFangSC-Regular', 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	background-color: #f2f5f8;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+
+#app .page {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.ant-col-1, .ant-col-2, .ant-col-3, .ant-col-4, .ant-col-5, .ant-col-6, .ant-col-7, .ant-col-8, .ant-col-9, .ant-col-10, .ant-col-11, .ant-col-12, .ant-col-13, .ant-col-14, .ant-col-15, .ant-col-16, .ant-col-17, .ant-col-18, .ant-col-19, .ant-col-20, .ant-col-21, .ant-col-22, .ant-col-23, .ant-col-24 {
+	float: none !important;
+	display: inline-block !important;
+}
+
+.ant-form-item-label label {
+	text-align: justify;
+	text-justify: distribute-all-lines;
+	text-align-last: justify;
+	display: block;
+}
+
+ol, ul {
+	list-style: none outside none;
+}
+
+dd, dl, li, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+dd, dl, li, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+.toast {
+	position: absolute;
+	font-size: 12px;
+	left: 0%;
+	top: 30%;
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+
+	z-index: 100;
+	transform: scale(1);
+
+	transition: all .3s ease;
+}
+
+.toast .toast-text {
+	border-radius: 6px;
+	margin: auto;
+	padding: 5px 10px;
+	color: white;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.toast-enter-active {
+	opacity: 0;
+	transform: scale(0.1);
+}
+
+.toast-leave-active {
+	opacity: 0;
+	transform: scale(0.1);
+}
+
+.fixed-ft {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: auto;
+	z-index: 1000;
+	height: 49px;
+	border-top: 1px solid #f2f2f2;
+	background: #fff;
+}
+
+.fixed-ft .nav-sub {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.fixed-ft .nav-sub li {
+	border-right: 1px solid #f2f2f2;
+	flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	text-align: center;
+	display: block;
+	height: 48px;
+	line-height: 44px;
+	font-size: 10px;
+	color: #999;
+	position: relative;
+	-ms-box-flex: 1;
+	-o-box-flex: 1;
+	box-flex: 1;
+	/*padding: 6px 0 4px;*/
+}
+
+.fixed-ft .nav-sub li.current {
+	color: #1B97FF;
+}
+
+.user-info {
+	font-size: 18px;
+	height: 60px;
+	line-height: 60px;
+}
+
+.ant-collapse-content {
+	display: none;
+}
+
+.ant-collapse-content.ant-collapse-item-active {
+	display: inherit;
+}

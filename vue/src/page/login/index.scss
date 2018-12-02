@@ -1,0 +1,23 @@
+.login-content {
+  height: 100%;
+  width: 100%;
+  padding: 100px 10px;
+  .owner-information {
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	border-bottom: 2px solid #cccccc;
+  }
+
+  .form-content {
+	width: 100%;
+	padding: 20px 50px;
+
+	.ant-form-item-label {
+	  min-width: 60px;
+	  padding: 0;
+	  margin-right: 10px;
+	}
+  }
+
+}

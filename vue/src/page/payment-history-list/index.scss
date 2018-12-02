@@ -1,0 +1,61 @@
+.payment-history-list-page {
+  .payment-list-content {
+	padding: 0 10px;
+
+	.owner-information {
+	  height: 60px;
+	  line-height: 60px;
+	  font-size: 18px;
+	  border-bottom: 2px solid #cccccc;
+	}
+	.payment-list-collapse {
+	  margin-top: 20px;
+	  text-align: left;
+	  p {
+		padding: 0 40px;
+		height: 30px;
+		line-height: 30px;
+		margin: 0;
+	  }
+	}
+  }
+}
+
+.fixed-ft {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: 1000;
+  height: 49px;
+  border-top: 1px solid #f2f2f2;
+  background: #fff;
+  .nav-sub {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	li {
+	  border-right: 1px solid #f2f2f2;
+	  flex: 1;
+	  -webkit-box-flex: 1;
+	  -webkit-flex: 1;
+	  -moz-box-flex: 1;
+	  -ms-flex: 1;
+	  text-align: center;
+	  display: block;
+	  height: 48px;
+	  line-height: 44px;
+	  font-size: 10px;
+	  color: #999;
+	  position: relative;
+	  -ms-box-flex: 1;
+	  -o-box-flex: 1;
+	  box-flex: 1;
+	  /*padding: 6px 0 4px;*/
+	  &.current {
+		color: #1B97FF;
+	  }
+	}
+  }
+}
